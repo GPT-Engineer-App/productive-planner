@@ -1,16 +1,19 @@
 import React from "react";
-import { Button } from "@chakra-ui/react";
+import { Button, Flex, VStack } from "@chakra-ui/react";
+import Sidebar from "../components/Sidebar";
 import { useNavigate } from "react-router-dom";
 
 function Settings() {
   let navigate = useNavigate();
 
   return (
-    <div>
-      <Button onClick={() => navigate("/")}>Back to Home</Button>
-      <h1>Settings</h1>
-      {}
-    </div>
+    <Flex>
+      <Sidebar />
+      <VStack p={8} ml="200px" w="full">
+        <Button onClick={() => navigate("/")}>Back to Home</Button>
+        <h1>Settings</h1>
+      </VStack>
+    </Flex>
   );
 }
 
